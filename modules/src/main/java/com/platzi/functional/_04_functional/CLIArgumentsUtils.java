@@ -1,6 +1,7 @@
 package com.platzi.functional._04_functional;
 
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class CLIArgumentsUtils {
     static void showHelp(CLIArguments cliArguments){
@@ -10,5 +11,9 @@ public class CLIArgumentsUtils {
           }
         };
         consumerHelper.accept(cliArguments);
+    }
+
+    static CLIArguments generateCLI(){
+        Supplier<CLIArguments> generator =()-> new CLIArguments();
     }
 }
